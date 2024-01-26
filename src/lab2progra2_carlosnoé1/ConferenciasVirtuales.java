@@ -13,20 +13,22 @@ import java.util.Date;
 public class ConferenciasVirtuales {
     public String Titulo;
     public String Conferencista;
-    public Date Fecha;
+    public String Fecha;
     public int Duracion;
     public String EnlaceAcceso;
 
     public ConferenciasVirtuales() {
     }
 
-    public ConferenciasVirtuales(String Titulo, String Conferencista, Date Fecha, int Duracion, String EnlaceAcceso) {
+    public ConferenciasVirtuales(String Titulo, String Conferencista, String Fecha, int Duracion, String EnlaceAcceso) {
         this.Titulo = Titulo;
         this.Conferencista = Conferencista;
         this.Fecha = Fecha;
         this.Duracion = Duracion;
         this.EnlaceAcceso = EnlaceAcceso;
     }
+
+    
 
     public String getTitulo() {
         return Titulo;
@@ -44,13 +46,7 @@ public class ConferenciasVirtuales {
         this.Conferencista = Conferencista;
     }
 
-    public Date getFecha() {
-        return Fecha;
-    }
-
-    public void setFecha(Date Fecha) {
-        this.Fecha = Fecha;
-    }
+   
 
     public int getDuracion() {
         return Duracion;

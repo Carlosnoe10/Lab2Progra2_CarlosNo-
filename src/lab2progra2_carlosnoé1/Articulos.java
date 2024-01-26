@@ -6,19 +6,20 @@ public class Articulos {
     public String Titulo;
     public String Autor;
     public String Tema;
-    public Date FechaPubli;
+    public String FechaPubli;
     public boolean Disponibilidad;
 
     public Articulos() {
     }
 
-    public Articulos(String Titulo, String Autor, String Tema, Date FechaPubli, boolean Disponibilidad) {
+    public Articulos(String Titulo, String Autor, String Tema, String FechaPubli, boolean Disponibilidad) {
         this.Titulo = Titulo;
         this.Autor = Autor;
         this.Tema = Tema;
         this.FechaPubli = FechaPubli;
         this.Disponibilidad = Disponibilidad;
     }
+
 
     public String getTitulo() {
         return Titulo;
@@ -44,13 +45,6 @@ public class Articulos {
         this.Tema = Tema;
     }
 
-    public Date getFechaPubli() {
-        return FechaPubli;
-    }
-
-    public void setFechaPubli(Date FechaPubli) {
-        this.FechaPubli = FechaPubli;
-    }
 
     public boolean isDisponibilidad() {
         return Disponibilidad;
