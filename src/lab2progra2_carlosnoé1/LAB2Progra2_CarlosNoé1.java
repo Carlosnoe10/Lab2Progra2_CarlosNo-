@@ -13,8 +13,10 @@ public class LAB2Progra2_CarlosNoé1 {
         ONE = new Scanner(System.in);
         System.out.println("Ingrese Contraseña");
         String Contrasenya = ONE.nextLine();
+        
+        
 
-        if (INICIO.getNombreUsu().contentEquals(Nombre) && INICIO.getContrasenya().equals(Contrasenya) ) {
+        if (INICIO.getNombreUsu().contentEquals(Nombre) && INICIO.getContrasenya().equals(Contrasenya)) {
 
             Scanner sc = new Scanner(System.in);
             boolean Bandera = true;
@@ -29,7 +31,7 @@ public class LAB2Progra2_CarlosNoé1 {
                 if ((NOM > 0) && (NOM < 6)) {
                     switch (NOM) {
                         case 1:
-
+                            
                             break;
                         case 2:
 
@@ -50,8 +52,8 @@ public class LAB2Progra2_CarlosNoé1 {
 
                 }
             }
-        }else{
-            System.out.println("Usuario o contrasenya Invalidos");  
+        } else {
+            System.out.println("Usuario o contrasenya Invalidos");
         }
     }
 

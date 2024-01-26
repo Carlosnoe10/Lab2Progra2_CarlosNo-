@@ -62,7 +62,12 @@ public class Articulos {
 
     @Override
     public String toString() {
-        return "Articulos{" + "Titulo=" + Titulo + ", Autor=" + Autor + ", Tema=" + Tema + ", FechaPubli=" + FechaPubli + ", Disponibilidad=" + Disponibilidad + '}';
+        return "Articulos= " + "\n"
+                + "Titulo=" + Titulo + "\n"
+                + "Autor= " + Autor + "\n"
+                + "Tema= " + Tema + "\n"
+                + "FechaPubli= " + FechaPubli + "\n"
+                + "Disponibilidad=" + Disponibilidad;
     }
     
     

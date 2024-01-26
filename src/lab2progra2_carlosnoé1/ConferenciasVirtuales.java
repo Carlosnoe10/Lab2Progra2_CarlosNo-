@@ -70,7 +70,12 @@ public class ConferenciasVirtuales {
 
     @Override
     public String toString() {
-        return "ConferenciasVirtuales{" + "Titulo=" + Titulo + ", Conferencista=" + Conferencista + ", Fecha=" + Fecha + ", Duracion=" + Duracion + ", EnlaceAcceso=" + EnlaceAcceso + '}';
+        return "ConferenciasVirtuales= " + "\n"
+                + "Titulo= " + Titulo + "\n"
+                + "Conferencista= " + Conferencista + "\n"
+                + "Fecha= " + Fecha + ""
+                + "Duracion= " + Duracion + "\n"
+                + "EnlaceAcceso= " + EnlaceAcceso ;
     }
     
     
