@@ -65,7 +65,7 @@ public class LAB2Progra2_CarlosNoé1 {
                     case 2:
                         boolean FlagCrea1 = true;
                         for (int j = 0; j < USU.size(); j++) {
-                            if ((USU.get(j).getTipoUsu().equalsIgnoreCase("Biblioteca")) && (USU.get(j).getTipoUsu().equalsIgnoreCase("Profesor"))) {
+                            if ((USU.get(j).getTipoUsu().equalsIgnoreCase("Biblioteca")) || (USU.get(j).getTipoUsu().equalsIgnoreCase("Profesor"))) {
                                 FlagCrea1 = true;
                                 j = USU.size();
 
@@ -97,8 +97,10 @@ public class LAB2Progra2_CarlosNoé1 {
                                                 if (Anio >= 0) {
                                                     if (Disp == 1) {
                                                         Libros novo = new Libros(Titulo, Autor, Anio, true);
+                                                        Books.add(novo);
                                                     } else if ((Disp == 2)) {
                                                         Libros novo = new Libros(Titulo, Autor, Anio, false);
+                                                        Books.add(novo);
                                                     } else {
                                                         System.out.println("Valor invalido");
                                                     }
@@ -113,18 +115,84 @@ public class LAB2Progra2_CarlosNoé1 {
                                             case 2:
                                                 ONE = new Scanner(System.in);
                                                 sc = new Scanner(System.in);
+                                                System.out.println("Ingrese el titulo");
+                                                String Titulo2 = ONE.nextLine();
+                                                ONE = new Scanner(System.in);
+                                                System.out.println("Ingrese el Autor");
+                                                String Autor2 = ONE.nextLine();
+                                                ONE = new Scanner(System.in);
+                                                System.out.println("Ingrese el tema");
+                                                String Tema = ONE.nextLine();
+                                                ONE = new Scanner(System.in);
+                                                System.out.println("Ingrese la fecha de publicacion");
+                                                String publi = ONE.nextLine();
+                                                ONE = new Scanner(System.in);
+                                                sc = new Scanner(System.in);
+                                                System.out.println("Ingrese 1 para Disponibilidad si y 2 si disponibilidad no");
+                                                int Disp1 = sc.nextInt();
+
+                                                if (Disp1 == 1) {
+                                                    Articulos art = new Articulos(Titulo2, Autor2, Tema, publi, true);
+                                                    Art.add(art);
+                                                    i++;
+                                                } else if ((Disp1 == 2)) {
+                                                    Articulos art = new Articulos(Titulo2, Autor2, Tema, publi, false);
+                                                    Art.add(art);
+                                                    i++;
+                                                } else {
+                                                    System.out.println("Valor invalido");
+                                                }
 
                                                 i++;
                                                 break;
                                             case 3:
                                                 ONE = new Scanner(System.in);
                                                 sc = new Scanner(System.in);
+                                                System.out.println("Ingrese el titulo");
+                                                String Titulo3 = ONE.nextLine();
+                                                System.out.println("Ingrese el Instructor");
+                                                String Instructor = ONE.nextLine();
+                                                sc = new Scanner(System.in);
+                                                System.out.println("Ingrese la duracion en semanas");
+                                                int Duracion = sc.nextInt();
+                                                System.out.println("Ingrese la plataforma ");
+                                                ONE = new Scanner(System.in);
+                                                sc = new Scanner(System.in);
+                                                String Plataforma = ONE.nextLine();
 
+                                                if (Duracion >= 0) {
+                                                    CursoEnLinea kurs = new CursoEnLinea(Titulo3, Instructor, Duracion, Plataforma);
+                                                    Cursos.add(kurs);
+                                                } else {
+                                                    System.out.println("Valor invalido");
+                                                }
                                                 i++;
+
                                                 break;
                                             case 4:
                                                 ONE = new Scanner(System.in);
                                                 sc = new Scanner(System.in);
+                                                System.out.println("Ingrese el titulo");
+                                                String Titulo4 = ONE.nextLine();
+                                                System.out.println("Ingrese el Conferencista");
+                                                String Conferencista = ONE.nextLine();
+                                                sc = new Scanner(System.in);
+                                                System.out.println("Ingrese la Duracion");
+                                                int Duracion1 = sc.nextInt();
+                                                System.out.println("Ingrese la Fecha ");
+                                                ONE = new Scanner(System.in);
+                                                sc = new Scanner(System.in);
+                                                String Fecha1 = ONE.nextLine();
+                                                System.out.println("Ingrese el enlace");
+                                                ONE = new Scanner(System.in);
+                                                sc = new Scanner(System.in);
+                                                String Enlace = sc.nextLine();
+                                                if (Duracion1 >= 0) {
+                                                    ConferenciasVirtuales Confe1 = new ConferenciasVirtuales(Titulo4, Conferencista, Fecha1, Duracion1, Enlace);
+                                                    Confe.add(Confe1);
+                                                } else {
+                                                    System.out.println("Valor invalido");
+                                                }
 
                                                 i++;
                                                 break;
@@ -145,7 +213,9 @@ public class LAB2Progra2_CarlosNoé1 {
 
                         break;
                     case 3:
-
+                        
+                        
+                        
                         break;
                     case 4:
 
