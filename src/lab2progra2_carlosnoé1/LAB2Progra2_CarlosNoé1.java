@@ -25,6 +25,7 @@ public class LAB2Progra2_CarlosNoé1 {
 
                         break;
                     case 2:
+                        
                         break;
                     case 3:
 
