@@ -1,20 +1,48 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package lab2progra2_carlosnoé1;
 
-/**
- *
- * @author cd507
- */
+import java.util.Scanner;
+
 public class LAB2Progra2_CarlosNoé1 {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        
+        
+        Scanner sc = new Scanner(System.in);
+        boolean Bandera = true;
+        while (Bandera != false) {
+            System.out.println("--Bienvenido al menu-- \n"
+                    + "Escriba '1' Si quiere Ingresar a listar recurso \n"
+                    + "Escriba '2' Si quiere Ingresar a Crear recurso \n"
+                    + "Escriba '3' Si quiere Ingresar a Eliminar Recurso \n"
+                    + "Escriba '4' Si quiere Ingresar a Modificar Recurso \n"
+                    + "Escriba '5' para Salir ");
+            int NOM = sc.nextInt();
+            if ((NOM > 0) && (NOM < 6)) {
+                switch (NOM) {
+                    case 1:
+
+                        break;
+                    case 2:
+                        break;
+                    case 3:
+
+                        break;
+                    case 4:
+
+                        break;
+                    case 5:
+                        Bandera = false;
+                        break;
+                }
+
+            } else {
+                System.out.println("Numero mal Ingresados");
+
+            }
+        }
+
     }
-    
+
 }
