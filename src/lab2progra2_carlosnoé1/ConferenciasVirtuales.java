@@ -64,6 +64,15 @@ public class ConferenciasVirtuales {
         this.EnlaceAcceso = EnlaceAcceso;
     }
 
+    public String getFecha() {
+        return Fecha;
+    }
+
+    public void setFecha(String Fecha) {
+        this.Fecha = Fecha;
+    }
+
+    
     @Override
     public String toString() {
         return "ConferenciasVirtuales= " + "\n"

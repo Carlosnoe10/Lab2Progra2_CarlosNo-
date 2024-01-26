@@ -53,14 +53,26 @@ public class LAB2Progra2_CarlosNoé1 {
             if ((NOM > 0) && (NOM < 6)) {
                 switch (NOM) {
                     case 1:
-                        if (INICIO.getTipoUsu().equalsIgnoreCase("Estudiante")) {
-                            for (int i = 0; i < Arr.size(); i++) {
-                                ((Libros) Arr.get(i)).toString();
-                            }
-                        } else {
-                            System.out.println("No tiene acesso");
-                        }
+                        for (int i = 0; i < Arr.size(); i++) {
+                            if (USU.get(i).getTipoUsu().equalsIgnoreCase("Estudiante")) {
+                                for (int j = 0; j < Books.size(); j++) {
+                                    System.out.println(Books.get(i).toString());
+                                }
+                                for (int j = 0; j < Art.size(); j++) {
+                                    System.out.println(Art.get(i).toString());
+                                }
+                                for (int j = 0; j < Cursos.size(); j++) {
+                                    System.out.println(Cursos.get(i).toString());
+                                }
+                                for (int j = 0; j < Confe.size(); j++) {
+                                    System.out.println(Confe.get(i).toString());
+                                }
+                                i++;
+                            } else {
 
+                                System.out.println("No tiene acesso");
+                            }
+                        }
                         break;
                     case 2:
                         boolean FlagCrea1 = true;
@@ -196,6 +208,9 @@ public class LAB2Progra2_CarlosNoé1 {
 
                                                 i++;
                                                 break;
+                                            case 5:
+                                                FlagCrea = false;
+                                                break;
                                             default:
                                                 System.out.println("Valor Invalido");
                                                 i--;
@@ -213,13 +228,261 @@ public class LAB2Progra2_CarlosNoé1 {
 
                         break;
                     case 3:
-                        
-                        
-                        
-                        break;
-                    case 4:
+                        for (int i = 0; i < USU.size(); i++) {
+                            if (USU.get(i).getTipoUsu().equalsIgnoreCase("Biblioteca")) {
+                                i = USU.size();
+                                boolean FlagCrea = true;
+                                while (FlagCrea != false) {
+                                    System.out.println("--Bienvenido al menu-- \n"
+                                            + "Escriba '1' Si quiere Ingresar a Eliminar Libros \n"
+                                            + "Escriba '2' Si quiere Ingresar a Eliminar Articulos \n"
+                                            + "Escriba '3' Si quiere Ingresar a Eliminar Cursos en Linea \n"
+                                            + "Escriba '4' Si quiere Ingresar a Eliminar Conferencias Virtuales \n"
+                                            + "Escriba '5' para Salir ");
+                                    int NOMCrear = sc.nextInt();
+
+                                    switch (NOMCrear) {
+                                        case 1:
+                                            ONE = new Scanner(System.in);
+                                            System.out.println("Ingrese el titulo");
+                                            String Titulo = ONE.nextLine();
+
+                                            for (int j = 0; j < Books.size(); j++) {
+                                                if (Books.get(i).getTitulo().equalsIgnoreCase(Titulo)) {
+                                                    Books.remove(j);
+                                                }
+
+                                            }
+                                            i++;
+                                            break;
+
+                                        case 2:
+                                            ONE = new Scanner(System.in);
+                                            System.out.println("Ingrese el titulo");
+                                            String Titulo1 = ONE.nextLine();
+
+                                            for (int j = 0; j < Books.size(); j++) {
+                                                if (Art.get(i).getTitulo().equalsIgnoreCase(Titulo1)) {
+                                                    Art.remove(j);
+                                                }
+
+                                            }
+                                            i++;
+                                            break;
+
+                                        case 3:
+                                            ONE = new Scanner(System.in);
+                                            System.out.println("Ingrese el titulo");
+                                            String Titulo2 = ONE.nextLine();
+
+                                            for (int j = 0; j < Books.size(); j++) {
+                                                if (Cursos.get(i).getTitulo().equalsIgnoreCase(Titulo2)) {
+                                                    Cursos.remove(j);
+                                                }
+
+                                            }
+                                            i++;
+                                            break;
+
+                                        case 4:
+                                            ONE = new Scanner(System.in);
+                                            System.out.println("Ingrese el titulo");
+                                            String Titulo3 = ONE.nextLine();
+
+                                            for (int j = 0; j < Books.size(); j++) {
+                                                if (Confe.get(i).getTitulo().equalsIgnoreCase(Titulo3)) {
+                                                    Confe.remove(j);
+                                                }
+
+                                            }
+                                            i++;
+                                            break;
+
+                                        case 5:
+                                            FlagCrea = true;
+                                            i++;
+                                            break;
+
+                                        default:
+                                            System.out.println("Valor invalido");
+                                            i--;
+                                    }
+                                }
+
+                                i++;
+                            } else {
+                                System.out.println("No tiene acesso");
+                            }
+                        }
 
                         break;
+                    case 4:
+                        boolean FlagCrea2 = true;
+                        for (int j = 0; j < USU.size(); j++) {
+                            if ((USU.get(j).getTipoUsu().equalsIgnoreCase("Biblioteca")) || (USU.get(j).getTipoUsu().equalsIgnoreCase("Profesor"))) {
+                                FlagCrea2 = true;
+                                j = USU.size();
+
+                                boolean FlagCrea = true;
+                                while (FlagCrea != false) {
+                                    for (int i = 0; i < 1; i++) {
+                                        System.out.println("--Bienvenido al menu-- \n"
+                                                + "Escriba '1' Si quiere Ingresar a MOD Libros \n"
+                                                + "Escriba '2' Si quiere Ingresar a MOD Articulos \n"
+                                                + "Escriba '3' Si quiere Ingresar a MOD Cursos en Linea \n"
+                                                + "Escriba '4' Si quiere Ingresar a MOD Conferencias Virtuales \n"
+                                                + "Escriba '5' para Salir ");
+                                        int NOMCrear = sc.nextInt();
+
+                                        switch (NOMCrear) {
+                                            case 1:
+                                                ONE = new Scanner(System.in);
+
+                                                System.out.println("Ingrese el Nuevo titulo");
+                                                String Titulo = ONE.nextLine();
+                                                System.out.println("Ingrese el Nuevo  Autor");
+                                                String Autor = ONE.nextLine();
+                                                sc = new Scanner(System.in);
+                                                System.out.println("Ingrese el  Nuevo Año de publicacion");
+                                                int Anio = sc.nextInt();
+                                                System.out.println("Ingrese 1 para Disponibilidad si y 2 si disponibilidad no");
+                                                int Disp = sc.nextInt();
+
+                                                if (Anio >= 0) {
+                                                    if (Disp == 1) {
+                                                        Libros novo = new Libros(Titulo, Autor, Anio, true);
+                                                        Books.add(novo);
+                                                    } else if ((Disp == 2)) {
+                                                        Libros novo = new Libros(Titulo, Autor, Anio, false);
+                                                        Books.add(novo);
+                                                    } else {
+                                                        System.out.println("Valor invalido");
+                                                    }
+                                                    i++;
+
+                                                } else {
+                                                    i--;
+                                                    System.out.println("Valores invalidos invalidos");
+                                                }
+
+                                                break;
+                                            case 2:
+                                                System.out.println("Ingrese el numero en lista del Articulo que desea modificar");
+                                                int Mod3 = ONE.nextInt();
+                                                if (Mod3 > 0 && Mod3 < Confe.size()) {
+                                                ONE = new Scanner(System.in);
+                                                sc = new Scanner(System.in);
+                                                System.out.println("Ingrese el  Nuevo titulo");
+                                                String Titulo2 = ONE.nextLine();
+                                                ONE = new Scanner(System.in);
+                                                System.out.println("Ingrese el Nuevo Autor");
+                                                String Autor2 = ONE.nextLine();
+                                                ONE = new Scanner(System.in);
+                                                System.out.println("Ingrese el Nuevo tema");
+                                                String Tema = ONE.nextLine();
+                                                ONE = new Scanner(System.in);
+                                                System.out.println("Ingrese la Nueva  fecha de publicacion");
+                                                String publi = ONE.nextLine();
+                                                ONE = new Scanner(System.in);
+                                                sc = new Scanner(System.in);
+                                                System.out.println("Ingrese 1 para Disponibilidad si y 2 si disponibilidad no");
+                                                int Disp1 = sc.nextInt();
+
+                                                if (Disp1 == 1) {
+                                                    Art.get(Mod3).setAutor(Autor2);
+                                                    Art.get(Mod3).setAutor(Autor2);
+                                                    i++;
+                                                } else if ((Disp1 == 2)) {
+                                                    Articulos art = new Articulos(Titulo2, Autor2, Tema, publi, false);
+                                                    Art.add(art);
+                                                    i++;
+                                                } else {
+                                                    System.out.println("Valor invalido");
+                                                }
+                                                }else{
+                                                    System.out.println("Valor Invalido");
+                                                }
+                                                i++;
+                                                break;
+                                            case 3:
+                                                System.out.println("Ingrese el numero en lista del Articulo que desea modificar");
+                                                int Mod2 = ONE.nextInt();
+                                                if (Mod2 > 0 && Mod2 < Confe.size()) {
+
+                                                    ONE = new Scanner(System.in);
+                                                    sc = new Scanner(System.in);
+                                                    System.out.println("Ingrese el  Nuevo  titulo");
+                                                    String Titulo3 = ONE.nextLine();
+                                                    System.out.println("Ingrese el  Nuevo Instructor");
+                                                    String Instructor = ONE.nextLine();
+                                                    sc = new Scanner(System.in);
+                                                    System.out.println("Ingrese la  Nuevo duracion en semanas");
+                                                    int Duracion = sc.nextInt();
+                                                    System.out.println("Ingrese la  Nuevo plataforma ");
+                                                    ONE = new Scanner(System.in);
+                                                    sc = new Scanner(System.in);
+                                                    String Plataforma = ONE.nextLine();
+
+                                                    if (Duracion >= 0) {
+                                                        Cursos.get(Mod2).setDuracionEnSemanas(Duracion);
+                                                        Cursos.get(Mod2).setInstuctor(Instructor);
+                                                        Cursos.get(Mod2).setPlataformaE(Plataforma);
+                                                        Cursos.get(Mod2).setTitulo(Titulo3);
+                                                        
+                                                        
+                                                    } else {
+                                                        System.out.println("Valor invalido");
+                                                    }
+                                                } else {
+                                                    System.out.println("Valor invalido");
+                                                }
+                                                i++;
+
+                                                break;
+                                            case 4:
+
+                                                System.out.println("Ingrese el numero en lista de la conferencia que desea modificar");
+                                                int Mod = ONE.nextInt();
+                                                if (Mod > 0 && Mod < Confe.size()) {
+
+                                                    ONE = new Scanner(System.in);
+                                                    sc = new Scanner(System.in);
+                                                    System.out.println("Ingrese el  Nuevo titulo");
+                                                    String Titulo4 = ONE.nextLine();
+                                                    System.out.println("Ingrese el  Nuevo Conferencista");
+                                                    String Conferencista = ONE.nextLine();
+                                                    sc = new Scanner(System.in);
+                                                    System.out.println("Ingrese la  Nueva Duracion");
+                                                    int Duracion1 = sc.nextInt();
+                                                    System.out.println("Ingrese la  Nuevo Fecha ");
+                                                    ONE = new Scanner(System.in);
+                                                    sc = new Scanner(System.in);
+                                                    String Fecha1 = ONE.nextLine();
+                                                    System.out.println("Ingrese el  Nuevo enlace");
+                                                    ONE = new Scanner(System.in);
+                                                    sc = new Scanner(System.in);
+                                                    String Enlace = sc.nextLine();
+                                                    if (Duracion1 >= 0) {
+                                                        Confe.get(Mod).setConferencista(Conferencista);
+                                                        Confe.get(Mod).setDuracion(Duracion1);
+                                                        Confe.get(Mod).setEnlaceAcceso(Enlace);
+                                                        Confe.get(Mod).setTitulo(Titulo4);
+                                                        Confe.get(Mod).setFecha(Fecha1);
+                                                    } else {
+                                                        System.out.println("Valor invalido");
+                                                    }
+
+                                                    i++;
+                                                } else {
+                                                    System.out.println("Ingrese un valor valido");
+                                                }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        break;
+
                     case 5:
                         Bandera = false;
                         break;
