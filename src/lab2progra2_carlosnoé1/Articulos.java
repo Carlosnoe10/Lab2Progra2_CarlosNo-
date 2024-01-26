@@ -54,6 +54,15 @@ public class Articulos {
         this.Disponibilidad = Disponibilidad;
     }
 
+    public String getFechaPubli() {
+        return FechaPubli;
+    }
+
+    public void setFechaPubli(String FechaPubli) {
+        this.FechaPubli = FechaPubli;
+    }
+    
+
     @Override
     public String toString() {
         return "Articulos= " + "\n"

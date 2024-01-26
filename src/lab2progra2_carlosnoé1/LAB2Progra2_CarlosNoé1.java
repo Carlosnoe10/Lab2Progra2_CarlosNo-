@@ -336,6 +336,10 @@ public class LAB2Progra2_CarlosNoé1 {
 
                                         switch (NOMCrear) {
                                             case 1:
+                                                
+                                                System.out.println("Ingrese el numero en lista del Articulo que desea modificar");
+                                                int Mod4 = ONE.nextInt();
+                                                if (Mod4 > 0 && Mod4 < Confe.size()) {
                                                 ONE = new Scanner(System.in);
 
                                                 System.out.println("Ingrese el Nuevo titulo");
@@ -350,11 +354,17 @@ public class LAB2Progra2_CarlosNoé1 {
 
                                                 if (Anio >= 0) {
                                                     if (Disp == 1) {
-                                                        Libros novo = new Libros(Titulo, Autor, Anio, true);
-                                                        Books.add(novo);
+                                                        Books.get(Mod4).setAutor(Autor);
+                                                        Books.get(Mod4).setAñoPubli(Disp);
+                                                        Books.get(Mod4).setDisponibilidad(true);
+                                                        Books.get(Mod4).setTitulo(Titulo);
+                                                        
+                                                        
                                                     } else if ((Disp == 2)) {
-                                                        Libros novo = new Libros(Titulo, Autor, Anio, false);
-                                                        Books.add(novo);
+                                                        Books.get(Mod4).setAutor(Autor);
+                                                        Books.get(Mod4).setAñoPubli(Disp);
+                                                        Books.get(Mod4).setDisponibilidad(true);
+                                                        Books.get(Mod4).setTitulo(Titulo);
                                                     } else {
                                                         System.out.println("Valor invalido");
                                                     }
@@ -363,6 +373,9 @@ public class LAB2Progra2_CarlosNoé1 {
                                                 } else {
                                                     i--;
                                                     System.out.println("Valores invalidos invalidos");
+                                                }
+                                                }else{
+                                                    System.out.println("Valor invalido");
                                                 }
 
                                                 break;
@@ -390,11 +403,17 @@ public class LAB2Progra2_CarlosNoé1 {
 
                                                 if (Disp1 == 1) {
                                                     Art.get(Mod3).setAutor(Autor2);
-                                                    Art.get(Mod3).setAutor(Autor2);
+                                                    Art.get(Mod3).setDisponibilidad(true);
+                                                    Art.get(Mod3).setTema(Tema);
+                                                    Art.get(Mod3).setTitulo(Titulo2);
+                                                    Art.get(Mod3).setFechaPubli(publi);
                                                     i++;
                                                 } else if ((Disp1 == 2)) {
-                                                    Articulos art = new Articulos(Titulo2, Autor2, Tema, publi, false);
-                                                    Art.add(art);
+                                                    Art.get(Mod3).setAutor(Autor2);
+                                                    Art.get(Mod3).setDisponibilidad(false);
+                                                    Art.get(Mod3).setTema(Tema);
+                                                    Art.get(Mod3).setTitulo(Titulo2);
+                                                    Art.get(Mod3).setFechaPubli(publi);
                                                     i++;
                                                 } else {
                                                     System.out.println("Valor invalido");
